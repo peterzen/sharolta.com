@@ -177,4 +177,10 @@ function init() {
         map: map,
         icon: image
     });
+
+	$.cloudinary.config({
+		cloud_name: 'sharolta',
+		api_key: '117999523363834'
+	});
+	$.cloudinary.responsive();
 }
