@@ -82,7 +82,7 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('default', ['clean'], function () {
-	gulp.start('styles', 'scripts', 'images', 'fonts');
+	gulp.start('styles', 'scripts', 'images', 'fonts', 'html');
 });
 
 
@@ -100,8 +100,7 @@ gulp.task('deploy', function () {
 
 
 gulp.task('html', [], function () {
-	return gulp.src('*.html')
-		//.pipe($.useref({searchPath: ['.']}))
+	return gulp.src('*.{html,png,ico}')
 		.pipe(gulp.dest('dist'));
 });
 
