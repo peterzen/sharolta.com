@@ -1,3 +1,4 @@
+/dist
 # Created by .gitignore support plugin (hsz.mobi)
 
 ### JetBrains template
@@ -59,5 +60,3 @@ assets/bower_components
 ### Node
 node_modules
 
-### Images
-images

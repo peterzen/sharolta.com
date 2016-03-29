@@ -6,15 +6,16 @@
 
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    if ($('.navbar').offset().top > 50) {
+        $('.navbar-fixed-top').addClass('top-nav-collapse');
     } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $('.navbar-fixed-top').removeClass('top-nav-collapse');
     }
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
+    'use strict';
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -34,6 +35,7 @@ $('.navbar-collapse ul li a').click(function() {
 google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
+	'use strict';
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
@@ -41,7 +43,7 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        center: new google.maps.LatLng(47.4778793,19.0432778), // New York
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
@@ -51,111 +53,111 @@ function init() {
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'water',
+            'elementType': 'geometry',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 17
+                'lightness': 17
             }]
         }, {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'landscape',
+            'elementType': 'geometry',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 20
+                'lightness': 20
             }]
         }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'road.highway',
+            'elementType': 'geometry.fill',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 17
+                'lightness': 17
             }]
         }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'road.highway',
+            'elementType': 'geometry.stroke',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 29
+                'lightness': 29
             }, {
-                "weight": 0.2
+                'weight': 0.2
             }]
         }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'road.arterial',
+            'elementType': 'geometry',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 18
+                'lightness': 18
             }]
         }, {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'road.local',
+            'elementType': 'geometry',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 16
+                'lightness': 16
             }]
         }, {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'poi',
+            'elementType': 'geometry',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 21
+                'lightness': 21
             }]
         }, {
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-                "visibility": "on"
+            'elementType': 'labels.text.stroke',
+            'stylers': [{
+                'visibility': 'on'
             }, {
-                "color": "#000000"
+                'color': '#000000'
             }, {
-                "lightness": 16
+                'lightness': 16
             }]
         }, {
-            "elementType": "labels.text.fill",
-            "stylers": [{
-                "saturation": 36
+            'elementType': 'labels.text.fill',
+            'stylers': [{
+                'saturation': 36
             }, {
-                "color": "#000000"
+                'color': '#000000'
             }, {
-                "lightness": 40
+                'lightness': 40
             }]
         }, {
-            "elementType": "labels.icon",
-            "stylers": [{
-                "visibility": "off"
+            'elementType': 'labels.icon',
+            'stylers': [{
+                'visibility': 'off'
             }]
         }, {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'transit',
+            'elementType': 'geometry',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 19
+                'lightness': 19
             }]
         }, {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'administrative',
+            'elementType': 'geometry.fill',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 20
+                'lightness': 20
             }]
         }, {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
+            'featureType': 'administrative',
+            'elementType': 'geometry.stroke',
+            'stylers': [{
+                'color': '#000000'
             }, {
-                "lightness": 17
+                'lightness': 17
             }, {
-                "weight": 1.2
+                'weight': 1.2
             }]
         }]
     };
@@ -169,7 +171,7 @@ function init() {
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'images/map-marker.png';
-    var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
+    var myLatLng = new google.maps.LatLng(47.4778793,19.0432778);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,

@@ -67,6 +67,11 @@ a {
 
   .navbar-brand {
     font-weight: 700;
+    padding: 0;
+
+    img {
+      height: 45px;
+    }
 
     &:focus {
       outline: none;
@@ -142,7 +147,7 @@ a {
   padding: 100px 0;
   text-align: center;
   color: $grayscale-light;
-  background: $grayscale-dark url(../images/intro-bg.jpg) no-repeat scroll bottom center;
+  background: $grayscale-dark url('//res.cloudinary.com/sharolta/image/upload/c_scale,h_1125/v1459265293/IMG_1231_2_tx8njd.jpg') no-repeat scroll top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -160,6 +165,17 @@ a {
       font-size: 18px;
     }
   }
+}
+
+.intro-body:before{
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0,0,0,.4);
+  display: block;
+  left: 0;
 }
 
 @media(min-width:$screen-xs-max) {
@@ -224,10 +240,19 @@ a {
   margin-top: 100px;
 }
 
+#about {
+  //background: $grayscale-dark url('//res.cloudinary.com/sharolta/image/upload/c_scale,h_1125/v1459270161/IMG_1409_jyw7nt.jpg') no-repeat scroll top center;
+
+}
+
 @media(min-width:$screen-xs-max) {
 
   .content-section {
     padding-top: 250px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
   }
 
   .download-section {
